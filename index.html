@@ -1,1 +1,29 @@
-Trang chu Home
+Kích phải  “my computer” chọn property.
+   Chọn “Advanced system setings”
+   Chọn nút “Environment Variables”
+   Trong ô “System Variables” kéo đến “Path” ấn nút “edit”
+   Gõ thêm vào cuối ;E:Dev-Cpp/bin/;  Ấn “OK” 3 lần
+Sử dụng môi trường lập trình CMD, biên dịch dòng lệnh bằng g++
+Soạn thảo nội dung dưới đây bằng notepad và ghi vào file với tên Hello.cpp (lưu ý nếu dùng notepad, khi lưu file phải chọn kiểu file là  All files, nếu để kiểu Text thì file kết quả sẽ là file có kiểu .txt)
+/* Hello.cpp */
+#include <iostream.h>
+int main()
+{
+    int n = 10;
+    cout << "n = ";
+    cin >> n;
+    cout << "Hello World! I am " << n << " years old.\n";  
+    return 0;  
+}
+Mở cửa sổ DOS, dịch file Hello.cpp bằng dòng lệnh:
+g++  Hello.cpp
+
+Chú ý đường dẫn của g++ (có thể là C:\Dev-C++\bin\g++) và file Hello.cpp. Kết quả biên dịch (nếu file Hello.cpp không có lỗi) sẽ là a.exe. Chạy chương trình a.exe.
+ Mở cửa sổ DOS, dịch file Hello.cpp bằng dòng lệnh:
+g++  -o  Hello.exe  Hello.cpp
+
+Kết quả biên dịch (nếu file Hello.cpp không có lỗi) sẽ là Hello.exe. Chạy chương trình Hello.exe.
+Copy file Hello.cpp sang file mới có tên Hello02.cpp. Sửa Hello02.cpp để có lỗi cú pháp. Biên dịch thử Hello02.cpp và quan sát các dòng báo lỗi của g++.
+
+-o file
+Write output to file. This is the same as specifying file as the second non-option argument to cpp. gcc has a different interpretation of a second non-option argument, so you must use -o to specify the output file.
